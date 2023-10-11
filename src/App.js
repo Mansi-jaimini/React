@@ -112,7 +112,7 @@ import React from 'react';
         <div>
      <button onClick={this.incrementCounter} >click me</button>
           <br/>
-          counters:{this.state.counter} 
+          counter:{this.state.counter} 
           </div>     
         )
   }
