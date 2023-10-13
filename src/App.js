@@ -101,13 +101,20 @@ import React from 'react';
       state={counter:0}
       constructor(props) {
         super(props)
+        console.log("i am inside constructor")
       }
-        incrementCounter = () =>
+      static getDerivedStateFromProps(){
+        console.log("i am inside getDrivedStateFromProps")
+        return true
+      }
+      incrementCounter = () =>
     {
       this.setState({counter:this.state.counter+1})
     }
       render() 
       {
+        console.log("inside render ")
+        console.log(this.props)
         return(
         <div>
      <button onClick={this.incrementCounter} >click me</button>
@@ -116,5 +123,9 @@ import React from 'react';
           </div>     
         )
   }
+  componentDidMount(){
+    console.log("i am inside componenetDidMount")
+  }
 }
+
 export default App;
